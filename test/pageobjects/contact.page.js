@@ -82,13 +82,9 @@ class contact extends Page {
         await this.fname.waitForDisplayed(1500);
         await this.fname.click();
         await this.fname.setValue(name1);
-        //await this.lname.click();
         await this.lname.setValue(name2);
-        //await this.emailField.waitForDisplayed(500);
         await this.emailField.setValue(email);
-       // await this.subject.waitForDisplayed(500);
         await this.subject.setValue(subject);
-        //await this.message.waitForDisplayed(500);
         await this.message.setValue(message);
         await this.sendMssgBtn.click();
         
@@ -100,7 +96,7 @@ class contact extends Page {
      */
     open () {
         return super.open('/products');
-        //return super.open('customer/account/create/');
+        
     }
 }
 
