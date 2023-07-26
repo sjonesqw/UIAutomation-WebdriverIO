@@ -14,19 +14,19 @@ class cart extends Page {
         return $('//button[@id="top-cart"]');
         
     }
-    get viewDetailCart(){ //USED
+    get viewDetailCart(){ 
         return $('//button[normalize-space()="View detailed cart"]');
     }
 
-    get deleteItem (){ //USED
+    get deleteItem (){ 
 
         return $('button[title="Remove item"]');
     }
 
-    get increaseQuantity (){ //USED
+    get increaseQuantity (){ 
         return $('button[title="Increment quantity"]');
     }
-     get decreaseQuantity (){ //USED
+     get decreaseQuantity (){ 
          return $('button[title="Decrement quantity"]');
      }
 
@@ -36,10 +36,10 @@ class cart extends Page {
      get emptyCart(){
          return $('//h1[normalize-space()="Your cart is empty."]');
      }
-     get productTitle (){ //USED
+     get productTitle (){ 
          return $('#snipcart > div > div > div.snipcart-layout__content > section > ul > li > div > div > div.snipcart-item-line__header > h2');
      }
-     get productDescription (){ //USED
+     get productDescription (){ 
          return $('#snipcart > div > div > div.snipcart-layout__content > section > ul > li > div > div > div.snipcart-item-line__content > div > div.snipcart-item-line__info > p');
      }
     
