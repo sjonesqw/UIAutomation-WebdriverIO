@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
+    "filterandsort": "npx wdio run wdio.conf.js --spec ./test/specs/filterandsort.e2e.js"
     "contact": "npx wdio run wdio.conf.js --spec ./test/specs/contact.e2e.js"
     "checkout": "npx wdio run wdio.conf.js --spec ./test/specs/checkout.e2e.js"
     "addtocart": "npx wdio run wdio.conf.js --spec ./test/specs/addtocart.e2e.js"
