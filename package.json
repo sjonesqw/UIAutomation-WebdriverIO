@@ -6,11 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
-
+    "checkout": "npx wdio run wdio.conf.js --spec ./test/specs/checkout.e2e.js"
     "addtocart": "npx wdio run wdio.conf.js --spec ./test/specs/addtocart.e2e.js"
     "login": "npx wdio run wdio.conf.js --spec ./test/specs/login.e2e.js",
     "signup": "npx wdio run wdio.conf.js --spec ./test/specs/signup.e2e.js"
-
   },
   "keywords": [],
   "author": "",
