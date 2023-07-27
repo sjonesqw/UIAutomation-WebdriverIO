@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
     "productdetails": "npx wdio run wdio.conf.js --spec ./test/specs/productDetails.e2e.js",
-    "productgallery": "npx wdio run wdio.conf.js --spec ./test/specs/productgallerypage.e2e.js",
+    "productgallery": "npx wdio run wdio.conf.js --spec ./test/specs/productGalleryPage.e2e.js",
     "search": "npx wdio run wdio.conf.js --spec ./test/specs/search.e2e.js",
     "cart": "npx wdio run wdio.conf.js --spec ./test/specs/cart.e2e.js",
     "filterandsort": "npx wdio run wdio.conf.js --spec ./test/specs/filterandsort.e2e.js",
