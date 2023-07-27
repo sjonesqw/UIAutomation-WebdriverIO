@@ -22,7 +22,7 @@ describe('My checkout  test ', () => {
         await LoginPage.open();
         await LoginPage.login("test@mailinator.com", "Stephanie1!");
         await browser.pause(2000);
-        expect( browser.url('https://ui-automation-camp.vercel.app/products'));
+        await expect( browser.url('https://ui-automation-camp.vercel.app/products'));
         await addtocart.addSingleItem1();
         await browser.pause(2000);
         await checkoutPage.checkoutshipping("Test Jay","test@mailinator.com","address_Full_match", "678","Chicago","New brunswick","10");
