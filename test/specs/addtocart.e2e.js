@@ -1,5 +1,5 @@
 const LoginPage = require('../pageobjects/Authentication/login.page');
-const cartpage = require('../pageobjects/addtocart.page');
+const cartpage = require('../pageobjects/addToCart.page');
 
 
 

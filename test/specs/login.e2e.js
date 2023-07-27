@@ -1,4 +1,4 @@
-const logindata = require('../data/logindata');
+const logindata = require('../data/loginData');
 const LoginPage = require('../pageobjects/Authentication/login.page');
 
 /*

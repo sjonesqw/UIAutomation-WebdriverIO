@@ -1,7 +1,7 @@
 const proddetail = require('../pageobjects/productDetails.page');
 const LoginPage = require('../pageobjects/Authentication/login.page');
 
-describe(' Verifies that product details are displayed  ', () => {
+describe(' Verifies that product details are displayed ', () => {
 
     it('Should navigate to the product detail page from the product gallery homepage', async () =>{
         await LoginPage.open();

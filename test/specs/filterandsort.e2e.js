@@ -1,7 +1,7 @@
 const LoginPage = require('../pageobjects/Authentication/login.page');
-const filterandsort = require('../pageobjects/filterandsort.page');
-const categorydata = require('../data/categorydata');
-const filterdata = require('../data/filterdata');
+const filterandsort = require('../pageobjects/filterAndSort.page');
+const categorydata = require('../data/categoryData');
+const filterdata = require('../data/filterData');
 
 
 describe('My filter & sort tests ', () => {
