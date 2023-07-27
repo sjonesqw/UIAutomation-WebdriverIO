@@ -1,4 +1,4 @@
-const proddetail = require('../pageobjects/productdetails.page');
+const proddetail = require('../pageobjects/productDetails.page');
 const LoginPage = require('../pageobjects/Authentication/login.page');
 
 describe(' Verifies that all header links on the product gallery homepage work ', () => {
