@@ -1,6 +1,6 @@
 const LoginPage = require('../pageobjects/Authentication/login.page');
 const search = require('../pageobjects/search.page');
-const searchdata = require('../data/searchdata');
+const searchdata = require('../data/searchData');
 
 
 describe('My filter & sort test ', () => {
