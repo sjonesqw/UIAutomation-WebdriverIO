@@ -7,18 +7,11 @@ const cvv = "908";
 
 
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
+
 class checkout extends Page {
-    /**
-     * define selectors using getter methods
-     *  
-     */
+    
     get detailedcart(){
-        //return $('button[class="snipcart-button-link"]');
-        //return $('//button[normalize-space()="View detailed cart"]');
-        //return $('#top-cart');
+        
         return $('//button[@id="top-cart"]')
         
     }
@@ -26,7 +19,6 @@ class checkout extends Page {
     get checkoutbtn (){
         
         return $('.snipcart-button-primary.snipcart-base-button.is-icon-right');
-        //$('.snipcart-button-primary.snipcart-base-button.is-icon-right')
         
     }
 
@@ -79,9 +71,6 @@ class checkout extends Page {
     get paymentiframe (){
         
         return $(".snipcart-payment-card-form snipcart-payment-card-form--loaded > iframe");
-       // return $('iframe[src="https://payment.snipcart.com/form/NTYzYzIxM2EtYTU0Ni00NWQ1LTgyNDctY2ZmMDllOWI1NGIxNjM4MDE4OTIwMzY1NDYyMjc2/b7d8b7e4-bcffcdc0-dff5-4c12-af64-04146b40a062"]');
-        //return $(`//iframe[contains(@src,"https://payment.snipcart.com/form")]`);
-        //#snipcart-checkout-step-payment > form > div.snipcart-loading-overlay.snipcart-payment__loading > div > div.snipcart-payment__form-container > div > div.snipcart-loading-overlay > div > fieldset > div > div > iframe
         
        
     }
@@ -91,7 +80,7 @@ class checkout extends Page {
     get billingcard (){
         
         return $('//*[@name="card-number"]');
-        //return  $('<iframe />').contentWindow.document.getElementById('//*[@name="card-number"]');
+        
     }
     get billingexpiry(){
         return $('#expiry-date');
@@ -110,14 +99,9 @@ class checkout extends Page {
 
     
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async checkoutshipping (name, email, address,aptsuite, city,province, postalcode) {
-        //await this.detailedcart.waitForDisplayed(2500);
-        //await this.detailedcart.waitForClickable(2000)
-        //await this.detailedcart.click();
+    
+    async checkoutshipping (name, email) {
+        //inititae checkout and complete shipping information form
         await this.checkoutbtn.click();
         await browser.pause(2000);
         await expect( browser.url('https://ui-automation-camp.vercel.app/products#/checkout'));
@@ -140,7 +124,7 @@ class checkout extends Page {
     }
     async checkoutpayment (){
         
-            
+        //enter the payment information in billing iframe
         await this.billingcard.waitForDisplayed(1500);
         await this.billingcard.click();
         await this.billingcard.setValue(testcard);
@@ -153,9 +137,7 @@ class checkout extends Page {
     }
 
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
+    
     open () {
         return super.open('');
         
