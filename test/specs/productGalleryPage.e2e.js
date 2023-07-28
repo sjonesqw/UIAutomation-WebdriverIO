@@ -1,4 +1,4 @@
-const productgallery = require('../pageobjects/productGalleryPage.page');
+const productGallery = require('../pageobjects/productGalleryPage.page');
 const LoginPage = require('../pageobjects/Authentication/login.page');
 
 describe(' Verifies that all header links on the product gallery homepage work ', () => {
@@ -7,25 +7,25 @@ describe(' Verifies that all header links on the product gallery homepage work '
         await LoginPage.open();
         await LoginPage.login("test@mailinator.com", "Stephanie1!");
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/products');
-        await productgallery.favouriteHat.click();
-        await productgallery.navigateToFavourites();
-        await expect(productgallery.hatTitle).toHaveText("Quality Fitted Hat");
+        await productGallery.favouriteHat.click();
+        await productGallery.navigateToFavourites();
+        await expect(productGallery.hatTitle).toHaveText("Quality Fitted Hat");
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/favorites');
-        await productgallery.navigateToHome();
+        await productGallery.navigateToHome();
     }); 
 
     it('Should navigate to the about page from the product gallery homepage', async () =>{
-        await productgallery.navigateToAbout();
+        await productGallery.navigateToAbout();
         await browser.switchWindow('https://qualityworkscg.com/automation-bootcamp/');
         await expect(browser).toHaveUrl('https://qualityworkscg.com/automation-bootcamp/');
         await browser.switchWindow('https://ui-automation-camp.vercel.app/products');
     }); 
     it('Should navigate to the contact page from the product gallery homepage', async () =>{
-        await productgallery.navigateToContact();
+        await productGallery.navigateToContact();
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/contact');
     }); 
     it('Should signout of the website ', async () =>{
-        await productgallery.signOut();
+        await productGallery.signOut();
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/');
     });
 
