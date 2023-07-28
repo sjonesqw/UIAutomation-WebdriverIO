@@ -1,14 +1,8 @@
-
 const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
+
 class contact extends Page {
-    /**
-     * define selectors using getter methods
-     *  
-     */
+    
     get contactBtn (){
         return $('#top-contact');
         
@@ -53,12 +47,9 @@ class contact extends Page {
     
 
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+    
     async linkedInCheck () {
-        
+        //click the linkedin button and verify that the new tab that is opened has the correct url
         await this.linkedIn.waitForDisplayed(1500);
         await this.linkedIn.click();
         await browser.pause(2000);
@@ -68,7 +59,7 @@ class contact extends Page {
     }
 
     async twitterCheck (){
-        
+        //click the twitter button and verify that the new tab that is opened has the correct url
         await this.twitter.waitForDisplayed(1500);
         await this.twitter.click();
         await browser.pause(2000);
@@ -78,7 +69,7 @@ class contact extends Page {
     }
 
     async contactForm (name1, name2, email, subject, message) {
-        
+        //complete the contact form and submit it
         await this.fname.waitForDisplayed(1500);
         await this.fname.click();
         await this.fname.setValue(name1);
@@ -91,9 +82,7 @@ class contact extends Page {
     }
 
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
+
     open () {
         return super.open('/products');
         
