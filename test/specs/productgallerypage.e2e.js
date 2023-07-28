@@ -10,8 +10,7 @@ describe(' Verifies that all header links on the product gallery homepage work '
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/products');
         //add the hat to favourites
         await productGallery.favouriteHat.click();
-        await productGallery.closePopUp.waitForDisplayed(1500);
-        await productGallery.closePopUp.click();
+        await browser.pause(3000);
         await productGallery.navigateToFavourites();
         //verify that th e hat is listed ont he favourites page
         await expect(productGallery.hatTitle).toHaveText("Quality Fitted Hat");

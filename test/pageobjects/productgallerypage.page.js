@@ -25,9 +25,7 @@ class productGallery extends Page {
     get hatTitle(){
         return $('#__next > div.chakra-container.css-1326l4r > div > div > div.chakra-stack.css-n21gh5 > div > div.chakra-stack.css-1oeb4ru > p');
     }
-    get closePopUp (){
-        return $('#toast-4 > button')
-    }
+    
 
     async navigateToFavourites (){
         await this.favouritesBtn.isDisplayed();
