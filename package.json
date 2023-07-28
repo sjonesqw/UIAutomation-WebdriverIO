@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
+<<<<<<< HEAD
     "productdetails": "npx wdio run wdio.conf.js --spec ./test/specs/productDetails.e2e.js",
     "productgallery": "npx wdio run wdio.conf.js --spec ./test/specs/productGalleryPage.e2e.js",
     "search": "npx wdio run wdio.conf.js --spec ./test/specs/search.e2e.js",
@@ -16,6 +17,9 @@
     "addtocart": "npx wdio run wdio.conf.js --spec ./test/specs/addtocart.e2e.js",
     "login": "npx wdio run wdio.conf.js --spec ./test/specs/login.e2e.js",
     "signup": "npx wdio run wdio.conf.js --spec ./test/specs/signup.e2e.js"
+=======
+    "productgallery": "npx wdio run wdio.conf.js --spec ./test/specs/productGalleryPage.e2e.js"
+>>>>>>> Product-Gallery-Page
   },
   "keywords": [],
   "author": "",
