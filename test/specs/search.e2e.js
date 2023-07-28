@@ -15,7 +15,7 @@ describe('My filter & sort test ', () => {
     for (const inputterm of searchdata){
         it(' should naviagate to the product gallery page and search for items from the search data file', async () => {
             
-            //loop thru search terms and verify that results displayed match
+            //loop thru search terms and verify that results displayed match the search term entered
             await search.search(inputterm.searchterm);
             await search.clear();
             
