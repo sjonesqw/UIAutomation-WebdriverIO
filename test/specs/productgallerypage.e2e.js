@@ -8,10 +8,13 @@ describe(' Verifies that all header links on the product gallery homepage work '
         await LoginPage.login("test@mailinator.com", "Stephanie1!");
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/products');
         await productgallery.favouriteHat.click();
+        await productgallery.closePopUp.waitForDisplayed(1500);
+        await productgallery.closePopUp.click();
         await productgallery.navigateToFavourites();
         await expect(productgallery.hatTitle).toHaveText("Quality Fitted Hat");
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/favorites');
         await productgallery.navigateToHome();
+        await browser.pause(3000);
     }); 
 
     it('Should navigate to the about page from the product gallery homepage', async () =>{
