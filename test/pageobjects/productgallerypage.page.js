@@ -1,4 +1,4 @@
-const { $ } = require('webdriverio/build/commands/browser');
+
 const Page = require('./page');
 
 class productGallery extends Page {
