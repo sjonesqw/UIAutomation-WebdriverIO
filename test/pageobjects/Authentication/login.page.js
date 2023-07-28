@@ -1,8 +1,6 @@
 const Page = require('../page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
+
 class LoginPage extends Page {
     
 
@@ -24,6 +22,7 @@ class LoginPage extends Page {
     get btnSubmit () {
         return $('body > div:nth-child(4) > div:nth-child(1) > div:nth-child(2) > form:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > button:nth-child(2)');
     }
+
     get errorMsgGen (){
         return $('.auth0-global-message.auth0-global-message-error');
     }
@@ -37,12 +36,9 @@ class LoginPage extends Page {
         
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+   
     async login (username, password) {
-        
+        //accept credentials entered and login to the website
         await this.enterBtn.waitForDisplayed(2000);
         await this.enterBtn.click();
         await this.enterEmail.waitForDisplayed(2000);
@@ -53,15 +49,13 @@ class LoginPage extends Page {
         await this.enterPassword.setValue(password);
         await this.btnSubmit.click();
     }
-
+    //navigate to login or signup from the initial landing page
     async enterSite(){
         await this.enterBtn.waitForDisplayed(2000);
         await this.enterBtn.click();
     }
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
+   
     open () {
         return super.open('');
     
