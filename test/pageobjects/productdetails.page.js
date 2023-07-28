@@ -25,18 +25,19 @@ class productDetails extends Page {
         await this.productImg.isDisplayed()
         await this.productImg.click();
         await this.productionDescription.isDisplayed();
+        //verify that the product title is dsiplayed
         await expect (this.productTitle).toHaveText("Quality Mug");
+        //verify that the product desciption is displayed 
         await expect(this.productionDescription).toHaveTextContaining("Pack of 2 Company Policies Boss Employee");
+        //Verify that the product price is displayed  
         await expect(this.productPrice).toHaveTextContaining("$15");
+        //Verify that the product category is displayed 
         await expect(this.productCategory).toHaveText("cup");
+        //Verify that the addtocart button is displayed
         await expect (this.addToCartBtn).isDisplayed;
 
 
     }
-    async verifyPrice (){
-
-    }
-    // use data file to loop thru each product and verify prices and description
 
 }
 

@@ -80,6 +80,7 @@ class addtocart extends Page{
         await browser.pause(2000);
     }
     
+    //specify the quantity of items to add to cart, using the text box from the product gallery page
     async specifyCountGalleryPage (count) {
         await this.qualityPillow.isDisplayed();
         await this.qualityPillow.click();
@@ -92,7 +93,7 @@ class addtocart extends Page{
         
        
     }
-
+    //specify the quantity of items to add to cart, using the text box from the product details page
     async specifyCountDetailPage (count) {
         await this.thirdItemImg.isDisplayed();
         await this.thirdItemImg.click();
@@ -138,7 +139,7 @@ class addtocart extends Page{
 
     open () {
         return super.open('');
-        //return super.open('customer/account/create/');
+        
     }
 }
 

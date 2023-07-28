@@ -11,10 +11,10 @@
     "productgallery": "npx wdio run wdio.conf.js --spec ./test/specs/productGalleryPage.e2e.js",
     "search": "npx wdio run wdio.conf.js --spec ./test/specs/search.e2e.js",
     "cart": "npx wdio run wdio.conf.js --spec ./test/specs/cart.e2e.js",
-    "filterandsort": "npx wdio run wdio.conf.js --spec ./test/specs/filterandsort.e2e.js",
+    "filterandsort": "npx wdio run wdio.conf.js --spec ./test/specs/filterAndSort.e2e.js",
     "contact": "npx wdio run wdio.conf.js --spec ./test/specs/contact.e2e.js",
     "checkout": "npx wdio run wdio.conf.js --spec ./test/specs/checkout.e2e.js",
-    "addtocart": "npx wdio run wdio.conf.js --spec ./test/specs/addtocart.e2e.js",
+    "addtocart": "npx wdio run wdio.conf.js --spec ./test/specs/addToCart.e2e.js",
     "login": "npx wdio run wdio.conf.js --spec ./test/specs/login.e2e.js",
     "signup": "npx wdio run wdio.conf.js --spec ./test/specs/signup.e2e.js"
 

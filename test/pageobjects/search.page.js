@@ -1,13 +1,8 @@
 const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
+
 class search extends Page {
-    /**
-     * define selectors using getter methods
-     *  
-     */
+    
     get searchField (){
         return $('#search');
         
@@ -31,20 +26,19 @@ class search extends Page {
         await  this.searchField.setValue(term);
         //verify that search results match term
         await expect(this.productSpecs).toHaveTextContaining(term);
-        //await this.resetbtn.click();
+        
         
         
     }
     async clear (){
-
-        //await this
+        // used the clear the search field after each iteration 
         await this.resetBtn.click();
     }
 
     
     open () {
         return super.open('/products');
-        //return super.open('customer/account/create/');
+        
     }
 }
 

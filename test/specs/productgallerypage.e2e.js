@@ -1,7 +1,5 @@
-
 const productGallery = require('../pageobjects/productGalleryPage.page');
 const loginPage = require('../pageobjects/Authentication/login.page');
-
 
 describe(' Verifies that all header links on the product gallery homepage work ', () => {
 
@@ -14,7 +12,7 @@ describe(' Verifies that all header links on the product gallery homepage work '
         await productGallery.favouriteHat.click();
         await browser.pause(3000);
         await productGallery.navigateToFavourites();
-        //verify that the hat is listed on the favourites page
+        //verify that th e hat is listed ont he favourites page
         await expect(productGallery.hatTitle).toHaveText("Quality Fitted Hat");
         await expect(browser).toHaveUrl('https://ui-automation-camp.vercel.app/favorites');
         //go back to gallery homepage

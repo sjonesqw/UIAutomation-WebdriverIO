@@ -2,18 +2,8 @@
 const Page = require('./page');
 
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
 class cart extends Page {
-    /**
-     * define selectors using getter methods
-     *  
-     */
-    get viewcCartSummary (){
-        return $('//button[@id="top-cart"]');
-        
-    }
+    
     get viewDetailCart(){ 
         return $('//button[normalize-space()="View detailed cart"]');
     }
@@ -44,17 +34,9 @@ class cart extends Page {
      }
     
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-    async viewAndDeleteFromSummary () {
-        await  this.viewcCartSummary.click();
-        
-        await this.deleteItemCartSummary.click();
     
-        
-    }
+    
+    //delete item from the detailed cart view
     async viewAndDeleteFromDetail () {
     
         
@@ -63,6 +45,7 @@ class cart extends Page {
     
         
     }
+    // change item quantity from detailed cart view
     async changeQuantity (){
         await this.viewDetailCart.waitForDisplayed(2000);
         await this.viewDetailCart.click();
@@ -76,9 +59,6 @@ class cart extends Page {
     }
 
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
     open () {
         return super.open('');
         
