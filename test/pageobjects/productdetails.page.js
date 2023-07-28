@@ -38,10 +38,6 @@ class productDetails extends Page {
 
 
     }
-    async verifyPrice (){
-
-    }
-    // use data file to loop thru each product and verify prices and description
 
 }
 
