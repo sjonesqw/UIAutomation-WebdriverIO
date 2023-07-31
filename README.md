@@ -3,9 +3,9 @@
 Using the IDE of your choice or the native terminal. Run the following commands to set up your project directory.
 Ensure that your current working directory is where you want to create your project folder:
 
-"mkdir <filename>" - Creates a folder in the directory you're currently in.
+"mkdir [filename]" - Creates a folder in the directory you're currently in.
 
-"cd <filename>" - Changes your current directory to the folder you just created.
+"cd [filename]" - Changes your current directory to the folder you just created.
 
 "npm init -y" - Inititalizes the directory as a Nodejs project.
 
@@ -30,7 +30,7 @@ Ensure that your current working directory is where you want to create your proj
 
 Now that the project has been created you can go ahead and clone this repo using the following command:
 
-" git clone <repoURL> "
+" git clone [repoURL] "
 
 
 To run the test files use the command: "npm run <testscriptname>". The script names can be found in the package.json file under scripts eg.
