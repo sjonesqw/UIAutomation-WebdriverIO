@@ -30,7 +30,7 @@ Ensure that your current working directory is where you want to create your proj
 
 Now that the project has been created you can go ahead and clone this repo using the following command:
 
-" git clone <repoURL>"
+" git clone <repoURL> "
 
 
 To run the test files use the command: "npm run <testscriptname>". The script names can be found in the package.json file under scripts eg.
